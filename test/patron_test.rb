@@ -16,4 +16,12 @@ class PatronTest < Minitest::Test
     assert_equal "Bob", @patron_1.name
     assert_equal 20, @patron_1.spending_money
   end
+
+  def test_it_starts_with_no_interests
+    assert_equal [], @patron_1.interests
+  end
+
+  def test_it_can_add_interests
+    assert_equal ["Dead Sea SCrolls", "Gems and Minerals"], @patron_1.interests
+  end
 end
